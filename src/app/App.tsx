@@ -1,7 +1,7 @@
 import React from 'react';
 import {Input} from "../shared/ui/input";
 import {Btn} from "../shared/ui/button";
-import {Output} from "../shared/ui/output/ui";
+import {Output} from "../shared/ui/output";
 
 function App(): React.JSX.Element {
   return (
@@ -26,7 +26,9 @@ function App(): React.JSX.Element {
           </div>
           <div className={"grid__item grid__item--isColumn-last grid__item--isRowSpan-4 isFlexCol"}>
               <p>Ответ:</p>
-              <Output />
+              <Output
+                  readOnly={true}
+              />
           </div>
       </div>
   )
