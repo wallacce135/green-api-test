@@ -17,5 +17,7 @@ export const defaultProps = {
 
 export const propTypes = {
     className: PropTypes.string,
-    value: PropTypes.string
+    value: PropTypes.string,
+    onChange: PropTypes.func,
+    readOnly: PropTypes.bool,
 }
