@@ -1,0 +1,48 @@
+{
+  "name": "green-api",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "webpack serve --mode=development",
+    "build": "webpack"
+  },
+  "description": "Тестовое задание для ЛСР",
+  "main": "src/app/index.tsx",
+  "author": "Georgy Koryakovsky",
+  "license": "ISC",
+  "contributors": [
+    {
+      "name": "Georgy Koryakovsky",
+      "email": "wallace135@gmail.com"
+    }
+  ],
+  "devDependencies": {
+    "copy-webpack-plugin": "^11.0.0",
+    "css-loader": "^6.8.1",
+    "jest": "^29.7.0",
+    "sass": "^1.69.5",
+    "sass-loader": "^13.3.2",
+    "style-loader": "^3.3.3",
+    "ts-jest": "^29.1.1",
+    "ts-loader": "^9.5.1",
+    "ts-node": "^10.9.2",
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
+  },
+  "dependencies": {
+    "@fontsource/roboto": "^5.0.8",
+    "@types/node": "^20.10.4",
+    "@types/react": "^18.2.43",
+    "@types/react-dom": "^18.2.17",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "^5.0.1",
+    "typescript": "^4.9.5",
+    "web-vitals": "^3.5.0"
+  },
+  "engines": {
+    "npm": ">=10",
+    "node": ">=21"
+  }
+}
