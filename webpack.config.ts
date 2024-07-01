@@ -1,12 +1,16 @@
 import path from "path";
-import {Configuration} from "webpack";
+import {Configuration, webpack} from "webpack";
 import CopyWebpackPlugin from "copy-webpack-plugin";
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
 import HtmlWebpackPlugin from "html-webpack-plugin";
 import CssMinimizerPlugin from "css-minimizer-webpack-plugin";
 import {env} from "process";
-
+import dotenv from 'dotenv';
+import { DefinePlugin } from "webpack";
 const isDev = env.NODE_ENV === "development";
+
+
+dotenv.config();
 
 const config: Configuration = {
    mode: (env.NODE_ENV as "production" | "development") ?? "development",
@@ -37,6 +41,11 @@ const config: Configuration = {
       path: path.resolve(__dirname, "dist")
    },
    plugins: [
+
+      new DefinePlugin({
+         'process.env': JSON.stringify(process.env)
+      }),
+
        new CopyWebpackPlugin({
           patterns: [{ from: "public" }]
        }),
